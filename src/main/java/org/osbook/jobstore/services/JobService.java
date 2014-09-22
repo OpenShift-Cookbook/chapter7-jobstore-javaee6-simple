@@ -21,7 +21,7 @@ public class JobService {
 
 	public List<Job> findAll() {
 		return entityManager
-				.createQuery("SELECT j from org.osbook.jobstore.domain.Job j order by j.submissionDate desc", Job.class)
+				.createQuery("SELECT j from org.osbook.jobstore.domain.Job j order by j.postedAt desc", Job.class)
 				.getResultList();
 	}
 
